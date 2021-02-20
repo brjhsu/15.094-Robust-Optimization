@@ -16,6 +16,10 @@
 using JuMP, JuMPeR  # Modeling
 using Distributions, Random  # For generating data
 using LinearAlgebra
+import Pkg
+Pkg.rm("Gurobi")
+Pkg.add(Pkg.PackageSpec(name = "Gurobi", version = v"0.8"))
+Pkg.build("Gurobi")
 using Gurobi
 using Printf # for pretty printing.
 
